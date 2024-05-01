@@ -10,5 +10,6 @@ const firebaseAppCheck = initializeAppCheck(firebaseApp, {
   // tokens as needed.
   isTokenAutoRefreshEnabled: true,
 });
+console.log({ firebaseAppCheck });
 
 export default firebaseAppCheck;
