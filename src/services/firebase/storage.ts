@@ -1,6 +1,7 @@
+import { getStorage } from "firebase/storage";
 import firebaseApp from ".";
-import { getFirestore } from "firebase/firestore";
 
-const firebaseStorage = getFirestore(firebaseApp);
+// Create a root reference
+const fireBaseStorage = getStorage(firebaseApp);
 
-export default firebaseStorage;
+export default fireBaseStorage;

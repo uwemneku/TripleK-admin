@@ -32,7 +32,7 @@ interface Props {
   defaultValue?: Parameters<Props["onSubmit"]>[0] & { index: number };
 }
 
-export function V({ control }: P) {
+export function AddVariants({ control }: P) {
   const {
     fields: variants = [],
     append,

@@ -1,4 +1,4 @@
-import { array, InferType, number, object, string } from "yup";
+import { array, InferType, number, object, string, mixed } from "yup";
 
 export const variantScheme = object().shape({
   name: string().required().label("Name"),
@@ -20,6 +20,10 @@ export const productScheme = object().shape({
   description: string().required(),
   price: number().required(),
   variants: array().of(variantScheme),
+  images: array()
+    .of(object().shape({ key: string().required(), file: mixed().required() }))
+    .required()
+    .min(1),
 });
 
 export type IProduct = InferType<typeof productScheme>;
